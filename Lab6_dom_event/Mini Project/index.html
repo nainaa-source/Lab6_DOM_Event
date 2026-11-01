@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Project - Pendaftaran Workshop</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Pendaftaran Workshop Web Development</h1>
+      <p>Isi formulir di bawah ini untuk mendaftar sesi workshop.</p>
+    </header>
+
+    <main class="content-grid">
+      <!-- Form Pendaftaran -->
+      <section class="card">
+        <h2>Formulir Pendaftaran</h2>
+        <form id="formWorkshop" novalidate>
+          
+          <!-- Input Nama -->
+          <div class="form-group">
+            <label for="nama">Nama Lengkap *</label>
+            <input type="text" id="nama" placeholder="Masukkan nama lengkap" maxlength="40">
+            <div class="info-row">
+              <span id="errNama" class="error-msg"></span>
+              <span class="char-count"><span id="countNama">0</span>/40</span>
+            </div>
+          </div>
+
+          <!-- Input Email -->
+          <div class="form-group">
+            <label for="email">Alamat Email *</label>
+            <input type="email" id="email" placeholder="contoh@email.com">
+            <span id="errEmail" class="error-msg"></span>
+          </div>
+
+          <!-- Pilihan Sesi -->
+          <div class="form-group">
+            <label for="sesi">Pilih Sesi Workshop *</label>
+            <select id="sesi">
+              <option value="">-- Pilih Sesi --</option>
+              <option value="Front-end Basics (HTML, CSS, JS)">Front-end Basics (HTML, CSS, JS)</option>
+              <option value="Advanced DOM & Event Handling">Advanced DOM & Event Handling</option>
+              <option value="Full-stack Introduction">Full-stack Introduction</option>
+            </select>
+            <span id="errSesi" class="error-msg"></span>
+          </div>
+
+          <!-- Catatan Tambahan -->
+          <div class="form-group">
+            <label for="catatan">Catatan/Harapan Workshop (Opsional)</label>
+            <textarea id="catatan" rows="3" placeholder="Tuliskan harapan Anda..." maxlength="150"></textarea>
+            <div class="info-row">
+              <span></span>
+              <span class="char-count"><span id="countCatatan">0</span>/150</span>
+            </div>
+          </div>
+
+          <!-- Tombol Aksi -->
+          <div class="button-group">
+            <button type="submit" id="btnSubmit" class="btn btn-primary">Daftar Sekarang</button>
+            <button type="button" id="btnReset" class="btn btn-secondary">Reset Input</button>
+          </div>
+        </form>
+
+        <!-- Status / Pesan Form -->
+        <div id="pesanForm" class="status-box" aria-live="polite"></div>
+      </section>
+
+      <!-- Ringkasan Live Preview -->
+      <section class="card preview-card">
+        <h2>Ringkasan Pendaftaran</h2>
+        <div id="previewBox" class="preview-content">
+          <p><strong>Nama:</strong> <span id="prevNama" class="placeholder-text">-</span></p>
+          <p><strong>Email:</strong> <span id="prevEmail" class="placeholder-text">-</span></p>
+          <p><strong>Sesi:</strong> <span id="prevSesi" class="placeholder-text">-</span></p>
+          <p><strong>Catatan:</strong> <span id="prevCatatan" class="placeholder-text">-</span></p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

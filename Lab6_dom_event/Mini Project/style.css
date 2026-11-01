@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+header h1 {
+  color: #173f75;
+  margin-bottom: 8px;
+}
+
+/* Layout Grid Responsif */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .content-grid {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  color: #173f75;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #e6f1ff;
+  padding-bottom: 8px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3478c8;
+  box-shadow: 0 0 0 3px rgba(52, 120, 200, 0.15);
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.char-count {
+  color: #64748b;
+  margin-left: auto;
+}
+
+.error-msg {
+  color: #dc2626;
+  font-size: 0.85rem;
+  display: block;
+}
+
+/* Group Button */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: #3478c8;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #173f75;
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: #475569;
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e1;
+}
+
+/* Status Box / Pesan Notifikasi */
+.status-box {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  display: none;
+}
+
+.status-box.sukses {
+  display: block;
+  background-color: #dcfce7;
+  color: #166534;
+  border-left: 4px solid #22c55e;
+}
+
+.status-box.error {
+  display: block;
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-left: 4px solid #ef4444;
+}
+
+/* Section Preview Ringkasan */
+.preview-card {
+  background-color: #fafafa;
+}
+
+.preview-content p {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+.placeholder-text {
+  color: #94a3b8;
+  font-style: italic;
+}
